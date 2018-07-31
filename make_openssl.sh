@@ -24,4 +24,5 @@ make all
 sudo -E make install CC=$ANDROID_TOOLCHAIN/arm-linux-androideabi-gcc RANLIB=$ANDROID_TOOLCHAIN/arm-linux-androideabi-ranlib
 
 cd ..
-echo "see logs in make_openssl.log" >/dev/tty
+exec >/dev/tty
+echo "see logs in make_openssl.log"

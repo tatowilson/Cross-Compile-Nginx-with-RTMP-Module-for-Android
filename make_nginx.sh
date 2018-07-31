@@ -76,4 +76,5 @@ make -j8
 make install -j8
 
 cd ..
-echo "see logs in make_nginx.log" >/dev/tty
+exec >/dev/tty
+echo "see logs in make_nginx.log"
