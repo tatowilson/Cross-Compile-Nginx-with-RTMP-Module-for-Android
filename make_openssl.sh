@@ -10,6 +10,10 @@ exec 2>&1
 . ./Setenv-android.sh
 export OPENSSL_DIR=$PWD/ssl/$ANDROID_API
 
+if [ -e $OPENSSL_DIR ]; then
+    rm -r $OPENSSL_DIR
+fi
+
 # enter openssl source code directory
 OPENSSL_SRC_DIR=$(p_find ".*openssl-[0-9]+\.[0-9]+\.[0-9]+[a-z]")
 if [[ -z $OPENSSL_SRC_DIR ]]; then
