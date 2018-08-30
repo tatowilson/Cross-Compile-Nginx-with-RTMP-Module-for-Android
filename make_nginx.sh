@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "building nginx..."
+echo "see logs in make_nginx.log"
 
 exec > make_nginx.log
 exec 2>&1
@@ -78,4 +79,4 @@ make install -j8
 
 cd ..
 exec >/dev/tty
-echo "see logs in make_nginx.log"
+exec 2>&1
