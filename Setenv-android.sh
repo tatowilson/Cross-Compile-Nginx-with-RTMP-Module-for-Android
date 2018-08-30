@@ -119,7 +119,7 @@ fi
 
 case $_ANDROID_ARCH in
 	arch-arm)	  
-      ANDROID_TOOLS=(arm-linux-androideabi-gcc arm-linux-androideabi-ranlib arm-linux-androideabi-ld)
+      ANDROID_TOOLS="arm-linux-androideabi-gcc arm-linux-androideabi-ranlib arm-linux-androideabi-ld"
 	  ;;
 	arch-x86)	  
       ANDROID_TOOLS="i686-linux-android-gcc i686-linux-android-ranlib i686-linux-android-ld"

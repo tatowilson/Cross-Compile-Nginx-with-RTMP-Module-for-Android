@@ -4,12 +4,13 @@ echo "building openssl..."
 
 exec > make_openssl.log
 exec 2>&1
+. ./portable_cmds.sh
 
 # 执行环境脚本，第一个句点不能省略
 . ./Setenv-android.sh
 export OPENSSL_DIR=/usr/local/ssl/$ANDROID_API
 # 进入openssl源码目录
-OPENSSL_SRC_DIR=$(find -E . -regex ".*openssl-[0-9]+\.[0-9]+\.[0-9]+[a-z]")
+OPENSSL_SRC_DIR=$(p_find ".*openssl-[0-9]+\.[0-9]+\.[0-9]+[a-z]")
 if [[ -z $OPENSSL_SRC_DIR ]]; then
     echo "Can't find openssl source directory!"
     exit 1
