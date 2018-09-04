@@ -173,7 +173,7 @@ if [ -z "$FIPS_SIG" ] || [ ! -e "$FIPS_SIG" ]; then
   fi
 
   if [ ! -e "$_FIPS_SIG" ]; then
-    _FIPS_SIG=`find $PWD -name incore`
+    _FIPS_SIG=`find $PWD -name incore | head -1`
   fi
 
   # If a path was set, then export it
