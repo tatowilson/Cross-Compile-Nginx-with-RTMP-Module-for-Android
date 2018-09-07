@@ -119,17 +119,17 @@ fi
 
 case $_ANDROID_ARCH in
 	arch-arm)	  
-      ANDROID_TOOLS="arm-linux-androideabi-gcc arm-linux-androideabi-ranlib arm-linux-androideabi-ld"
+      ANDROID_TOOLS=(arm-linux-androideabi-gcc arm-linux-androideabi-ranlib arm-linux-androideabi-ld)
 	  ;;
 	arch-x86)	  
-      ANDROID_TOOLS="i686-linux-android-gcc i686-linux-android-ranlib i686-linux-android-ld"
+      ANDROID_TOOLS=(i686-linux-android-gcc i686-linux-android-ranlib i686-linux-android-ld)
 	  ;;	  
 	*)
 	  echo "ERROR ERROR ERROR"
 	  ;;
 esac
 
-for tool in $ANDROID_TOOLS
+for tool in ${ANDROID_TOOLS[@]}
 do
   # Error checking
   if [ ! -e "$ANDROID_TOOLCHAIN/$tool" ]; then
