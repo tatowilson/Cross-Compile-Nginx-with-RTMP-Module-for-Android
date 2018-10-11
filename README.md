@@ -45,10 +45,14 @@ execute these commands in Terminal:
 . ./make_nginx.sh
 ```
 
+# How to run nginx on Android
+
+See [NginxDemo](NginxDemo).
+
 # License
 
 `Setenv-android.sh`: [OpenSSL license]  
-`glob.c` and `glob.h`: [BSD-3-Clause License]  
+`glob.c` and `glob.h`([source](https://github.com/white-gecko/TokyoCabinet)): [BSD-3-Clause License]  
 `other files`: [WTFPL]  
 
 [OpenSSL license]:http://www.openssl.org/source/license.html
